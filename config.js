@@ -147,7 +147,7 @@ var config = {
     {
       id: "ch7",
       title: "Chapter 7",
-      image: "images/Chapter_3_Image.jpg",
+      image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_7_Image.png?v=1588886430419",
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
       description: "As a result, the mixed use lots drastically increased as much as twice the footprint from the year 2000 to 2017. Several commercial lots are adding housing wings that allow them to go taller. A high concentration of these mixed use buildings can be observed developing in the north of this midtown zone, emerging to become one of the highest estate value streets of Manhattan, Billionaire's row. The number of flats available for rent in this row surged up but also increasing the rental value of these apartments.",
       location: {
@@ -180,7 +180,7 @@ var config = {
     {
       id: "ch8",
       title: "Chapter 8",
-      image: "images/Chapter_4_Image.jpg",
+      image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_8_Image.png?v=1588886879438",
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
       description: "this is the text for chapter 8",
       location: {
