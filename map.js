@@ -408,7 +408,7 @@ map.on("load", function() {
       },
       paint: {
         "fill-color": "#808080",
-        "fill-opacity": 0.3
+        "fill-opacity": 0.1
       }
     },
     "waterway-shadow"
