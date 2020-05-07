@@ -98,7 +98,7 @@ var config = {
     {
       id: "ch5",
       title: "Chapter 5",
-      image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_5_Image.png?v=1588873080395,
+      image: "images/Chapter_1_Image.jpg",
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
       description: "Midtown forms an interesting pivot in understanding the relation between the high rents and yet higher vacancy rates. Looking into the history, the midtown zone was initially proposed as a hub for trade and commerce, developing over the years, this area got a reputation of high rise commercial buildings, some mixed use buildings but very few apartment buildings. ",
       location: {
@@ -125,7 +125,7 @@ var config = {
       title: "Chapter 6",
       image: "images/Chapter_2_Image.jpg",
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
-      description: "this is the text for chapter 6",
+      description: "Out of several Bloomberg’s 2013 rezoning policies for NYC, one of the neighbourhood’s that was impacted was Midtown. The commercial lots were given incentives of higher FSI and to build twice as tall in return of addition of housing and privately owned public spaces to accommodate and invite estate investors and corporate tenants. ",
       location: {
         center: [-73.996, 40.756],
         zoom: 13.95,
@@ -150,7 +150,7 @@ var config = {
       title: "Chapter 7",
       image: "images/Chapter_3_Image.jpg",
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
-      description: "this is the text for chapter 7",
+      description: "As a result, the mixed use lots drastically increased as much as twice the footprint from the year 2000 to 2017, as a resultant of several commercial lots adding housing wings that allow them to go taller. The number of flats available for rent surged up but also increasing the rental value of these apartments.",
       location: {
         center: [-73.986, 40.761],
         zoom: 14.66,
