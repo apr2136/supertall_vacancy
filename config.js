@@ -213,19 +213,26 @@ var config = {
       ]
     },
     {
+      
       id: "ch9",
       title: "Chapter 9",
       image: "images/Chapter_1_Image.jpg",
-      imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
-      description: "this is the text for chapter 9",
+      imageCredit: "<a href=source</a>",
+      description:  `
+      <audio controls autoplay id="audio-control">
+        <source src="audio/ramoneInterview.mpeg" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>`,
       location: {
         center: [-73.98131, 40.76117],
         zoom: 14.61,
         pitch: 0,
         bearing: 0
       },
-      onChapterEnter: [],
-      onChapterExit: []
+      onChapterEnter: [
+      ],
+      onChapterExit: [
+      ],
     }
   ]
 };
