@@ -15,7 +15,7 @@ var config = {
   chapters: [
     {
       id: "ch1",
-      title: "Chapter 1",
+      title: "Rent Range in Manhattan",
       image: "images/Chapter_1_Image.jpg",
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
       description: "this is the text for chapter 1",
@@ -41,7 +41,7 @@ var config = {
     },
     {
       id: "ch2",
-      title: "Chapter 2",
+      title: "Vacancy Rates in Manhattan",
       image: "images/Chapter_2_Image.jpg",
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
       description: "this is the text for chapter 2",
@@ -96,9 +96,9 @@ var config = {
     },
     {
       id: "ch5",
-      title: "Chapter 5",
+      title: "Midtown in 2000",
       image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_5_Image.png?v=1588873080395",
-      imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+     
       description: "Midtown forms an interesting pivot in understanding the relation between the high rents and yet higher vacancy rates. Looking into the history, the midtown zone was initially proposed as a hub for trade and commerce, developing over the years, this area got a reputation of high rise commercial buildings, some mixed use buildings but very few apartment buildings. ",
       location: {
         center: [-73.996, 40.756],
@@ -121,9 +121,9 @@ var config = {
     },
     {
       id: "ch6",
-      title: "Chapter 6",
+      title: "Midtown in 2017",
       image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_5_Image.png?v=1588873080395",
-      imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+     
       description: "Out of several Bloomberg’s 2013 rezoning policies for NYC, one of the neighbourhood’s that was impacted was Midtown. The commercial lots were given incentives of higher FSI and to build twice as tall in return of addition of housing and privately owned public spaces to accommodate and invite estate investors and corporate tenants.",
       location: {
         center: [-73.996, 40.756],
@@ -146,9 +146,9 @@ var config = {
     },
     {
       id: "ch7",
-      title: "Chapter 7",
+      title: "Shift in the Land Use",
       image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_7_Image.png?v=1588886430419",
-      imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+
       description: "As a result, the mixed use lots drastically increased as much as twice the footprint from the year 2000 to 2017. Several commercial lots are adding housing wings that allow them to go taller. A high concentration of these mixed use buildings can be observed developing in the north of this midtown zone, emerging to become one of the highest estate value streets of Manhattan, Billionaire's row. The number of flats available for rent in this row surged up but also increasing the rental value of these apartments.",
       location: {
         center: [-73.986, 40.761],
@@ -178,7 +178,7 @@ var config = {
       ]
     },
     {
-      id: "ch8",
+      id: "The Super Talls",
       title: "Chapter 8",
       image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_8_Image.png?v=1588886879438",
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
@@ -214,7 +214,7 @@ var config = {
     {
       
       id: "ch9",
-      title: "Chapter 9",
+      title: "The Doormen Insights",
       image: "images/Chapter_1_Image.jpg",
       imageCredit: "<a href=source</a>",
       description:  `

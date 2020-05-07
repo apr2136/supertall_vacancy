@@ -356,6 +356,21 @@ map.on("load", function() {
   /**********************
     // chapter 7
     ***********************/
+    map.addLayer(
+    {
+      id: "midtown",
+      type: "fill",
+      source: {
+        type: "geojson",
+        data: "data/ch8/midtown.geojson"
+      },
+      paint: {
+        "fill-color": "#808080",
+        "fill-opacity": 0.3
+      }
+    },
+    "waterway-shadow"
+  );
   map.addLayer(
     {
       id: "landuseA4",
@@ -385,7 +400,7 @@ map.on("load", function() {
           "match",
           ["get", "landUse2"],
           "04",
-          "#fdbb84",
+          "#fee8c8",
           "#ffffff"
         ],
         "fill-opacity": 0
@@ -407,7 +422,7 @@ map.on("load", function() {
       },
       paint: {
         "fill-color": "#808080",
-        "fill-opacity": 0
+        "fill-opacity": 1
       }
     },
     "waterway-shadow"
