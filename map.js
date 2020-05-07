@@ -254,7 +254,8 @@ map.on("load", function () {
     // var buildings = map.getLayer('building-extrusion')
     // buildings['paint']['fill-extrusion-color']  = '#add8e6'
     // buildings['paint']['fill-extrusion-opacity']  = 1
-    // map.setPaintProperty('building-extrusion', 'fill-extrusion-color', ['step', ['get', 'height'],
+    map.setPaintProperty('building-extrusion', 'fill-extrusion-opacity', 0)
+                         // ['step', ['get', 'height'],
     //             '#3182bd',
     //             250*0.3048, '#add8e6',
     //             400*0.3048, '#3182bd',
@@ -270,16 +271,20 @@ map.on("load", function () {
             'data': 'data/ch8/supertallheights.geojson'
         },
         'paint': {
-            'fill-extrusion-height': ['get', 'heightroof'],
-            'fill-extrusion-color': ['step', ['get', 'heightroof'],
+            'fill-extrusion-height': [ '*',['get', 'heightroof'], 0.3048],
+            'fill-extrusion-color': 
+          
+          ['step', ['get', 'heightroof'],
                 '#3182bd',
+                1*0.3048, '#adadad',
                 250*0.3048, '#add8e6',
                 400*0.3048, '#3182bd',
                 600*0.3048, '#152238',
                 900*0.3048, '#152238',
-        ],'fill-extrusion-opacity': 1
+        ],
+          'fill-extrusion-opacity': 1
         }
-    }, 'waterway-shadow');
+    });
 
     // Setup the instance, pass callback functions
     scroller
