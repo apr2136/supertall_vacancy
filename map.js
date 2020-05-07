@@ -253,13 +253,14 @@ map.on("load", function () {
 
     map.addLayer({
         
-        'id': 'supertallheights',
+        'id': 'building-extrusion',
         'type': 'fill-extrusion',
         'source': {
             'type': 'geojson',
             'data': 'data/ch8/supertallheights.geojson'
         },
         'paint': {
+          'fill-extrusion-height': ['get', 'heightroof'],
             'fill-extrusion-color': ['step', ['get', 'heightroof'],
                 '#3182bd',
                 250, '#add8e6',

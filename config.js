@@ -124,7 +124,7 @@ var config = {
             description: 'this is the text for chapter 8',
             location: {
                 center: [-73.984881, 40.748787],
-                zoom: 16.28,
+                zoom: 13.28,
                 pitch: 36,
                 bearing: 12
             },
