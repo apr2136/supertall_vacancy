@@ -249,7 +249,7 @@ map.on("load", function () {
             'fill-color':'#808080',
             'fill-opacity': 0.15
         },
-    }, firstSymbolId);
+    }, 'waterway-shadow');
 
     map.addLayer({
         
@@ -269,7 +269,7 @@ map.on("load", function () {
                     ],
             'fill-opacity': 1
         }
-    }, firstSymbolId);
+    }, 'waterway-shadow');
 
     // Setup the instance, pass callback functions
     scroller

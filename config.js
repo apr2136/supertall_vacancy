@@ -122,9 +122,10 @@ var config = {
             imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
             description: 'this is the text for chapter 8',
             location: {
-                center: [-73.979, 40.74],
-                zoom: 20,
-                pitch: 0,
+              // 15.81/40.757235/-73.983602/0/41
+                center: [-73.983602, 40.757235],
+                zoom: 15.81,
+                pitch: 41,
                 bearing: 0
             },
             onChapterEnter: [
