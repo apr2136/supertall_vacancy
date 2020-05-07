@@ -1,6 +1,6 @@
 var config = {
-    accessToken: 'pk.eyJ1Ijoia3JtMjE3OCIsImEiOiJjazhhYjUxN2QwZnloM2x2dTU5d3BseDFlIn0.T93XLmaxJl9j0mqdZXLsvg',
-    style: 'mapbox://styles/krm2178/ck8ad7pyd0y3a1inz9p3mx0mn',
+    accessToken: 'pk.eyJ1IjoiYXByMjEzNiIsImEiOiJjazlybGZ0ZXMwdm96M2dxcW9wZG80Y2U2In0.75zqiYgqoLeBbjywrfP9nQ',
+    style: 'mapbox://styles/apr2136/ck8ad7yrh0jt91inta8gopadd',
     theme: 'light',
     alignment: 'left',
     toptitle: 'Points Unknown | Tutorial 10 | Mapbox Storytelling',
@@ -123,8 +123,8 @@ var config = {
             imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
             description: 'this is the text for chapter 8',
             location: {
-                center: [-73.984881, 40.748787],
-                zoom: 13.28,
+                center: [-73.987652, 40.754303],
+                zoom: 16.28,
                 pitch: 36,
                 bearing: 12
             },

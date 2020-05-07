@@ -254,16 +254,17 @@ map.on("load", function () {
     // var buildings = map.getLayer('building-extrusion')
     // buildings['paint']['fill-extrusion-color']  = '#add8e6'
     // buildings['paint']['fill-extrusion-opacity']  = 1
+    map.setPaintProperty('building-extrusion', 'fill-extrusion-color', '#add8e6');
 
-    map.addLayer({
-        'id': 'building-extrusion_custom',
-        'type': 'fill-extrusion',
-        'source': 'buildings',
-        'paint': {
-            'fill-extrusion-color':'#add8e6',
-            'fill-extrusion-opacity': 1
-        }
-    }, 'waterway-shadow');
+    // map.addLayer({
+    //     'id': 'building-extrusion_custom',
+    //     'type': 'fill-extrusion',
+    //     'source': 'buildings',
+    //     'paint': {
+    //         'fill-extrusion-color':'#add8e6',
+    //         'fill-extrusion-opacity': 1
+    //     }
+    // }, 'waterway-shadow');
 
     // Setup the instance, pass callback functions
     scroller
