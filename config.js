@@ -66,9 +66,9 @@ var config = {
     },
     {
       id: "ch3",
-      title: "Chapter 3",
-      image: "images/Chapter_3_Image.jpg",
-      imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+      title: "Vacancy and High Rents in Manhattan",
+      image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_3_Image.png?v=1588894252566",
+    
       description: "this is the text for chapter 3",
       location: {
         center: [-74.025, 40.774],
@@ -81,9 +81,9 @@ var config = {
     },
     {
       id: "ch4",
-      title: "Chapter 4",
-      image: "images/Chapter_4_Image.jpg",
-      imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+      title: "Major Concentration of Vacancy in Midtown",
+      image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_4_Image.png?v=1588894252817",
+ 
       description: "this is the text for chapter 4",
       location: {
         center: [-73.996, 40.756],
@@ -181,7 +181,7 @@ var config = {
       id: "The Super Talls",
       title: "Chapter 8",
       image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_8_Image.png?v=1588886879438",
-      imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+    
       description: "this is the text for chapter 8",
       location: {
         // 15.16/40.764982/-73.978015/45.1/60
@@ -216,7 +216,7 @@ var config = {
       id: "ch9",
       title: "The Doormen Insights",
       image: "images/Chapter_1_Image.jpg",
-      imageCredit: "<a href=source</a>",
+      imageCredit: "Authors",
       description:  `
       <audio controls autoplay id="audio-control">
         <source src="audio/vinoly_tower_residential.m4a" type="audio/mpeg">
