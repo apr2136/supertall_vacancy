@@ -251,26 +251,23 @@ map.on("load", function () {
         },
     }, 'waterway-shadow');
 
-    map.addLayer({
-        
-        'id': 'building-extrusion',
-        'type': 'fill-extrusion',
-        'source': {
-            'type': 'geojson',
-            'data': 'data/ch8/supertallheights.geojson'
-        },
-        'paint': {
-          'fill-extrusion-height': ['get', 'heightroof'],
-            'fill-extrusion-color': ['step', ['get', 'heightroof'],
-                '#3182bd',
-                250, '#add8e6',
-                400, '#3182bd',
-                600, '#152238',
-                900, '#152238',
-                    ],
+    var buildings = map.getLayer('building-extrusion')
+    buildings['paint']['fill-extrusion-color']  ='#add8e6'
             'fill-extrusion-opacity': 1
         }
-    }, 'waterway-shadow');
+//     map.addLayer({
+        
+//         'id': 'building-extrusion',
+//         'type': 'fill-extrusion',
+//         'source': {
+//             'type': 'tileset',
+//             'data': 'https://studio.mapbox.com/tilesets/mapbox.mapbox-streets-v8/building'
+//         },
+//         'paint': {
+//             'fill-extrusion-color':'#add8e6',
+//             'fill-extrusion-opacity': 1
+//         }
+//     }, 'waterway-shadow');
 
     // Setup the instance, pass callback functions
     scroller
