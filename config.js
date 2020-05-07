@@ -1,6 +1,6 @@
 var config = {
-    accessToken: 'pk.eyJ1IjoiYXByMjEzNiIsImEiOiJjazlybGZ0ZXMwdm96M2dxcW9wZG80Y2U2In0.75zqiYgqoLeBbjywrfP9nQ',
-    style: 'mapbox://styles/apr2136/ck8ad7yrh0jt91inta8gopadd',
+    accessToken: 'pk.eyJ1Ijoia3JtMjE3OCIsImEiOiJjazhhYjUxN2QwZnloM2x2dTU5d3BseDFlIn0.T93XLmaxJl9j0mqdZXLsvg',
+    style: 'mapbox://styles/krm2178/ck8ad7pyd0y3a1inz9p3mx0mn',
     theme: 'light',
     alignment: 'left',
     toptitle: 'Points Unknown | Tutorial 10 | Mapbox Storytelling',
@@ -11,13 +11,13 @@ var config = {
     footerAttribution: '<a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox</a> | <a href="http://www.openstreetmap.org/about/" target="_blank">© OpenStreetMap</a> | <a href="https://brown.columbia.edu">The Brown Institute for Media Innovation</a>',
     chapters: [
         {
-            id: 'overallMap',
-            title: 'Subway Ridership Plummets',
+            id: 'ch1',
+            title: 'Chapter 1',
             image: 'images/Chapter_1_Image.jpg',
             imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
-            description: 'All around the city subway ridership plummeted during the first two weeks of the Covid-19 outbreak. On average, stations saw a decrease of more than 50% in entries and exits between March 6th and March 20th, 2020. But as this map shows, the drop in ridership did not happen uniformly throughout the city.',
+            description: 'this is the text for chapter 1',
             location: {
-                center: [-74, 40.725],
+                center: [-73.979, 40.74],
                 zoom: 10,
                 pitch: 0,
                 bearing: 0
@@ -26,79 +26,139 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'incomeUnderlay',
-            title: 'Forced to work and take the subway',
+            id: 'ch2',
+            title: 'Chapter 2',
             image: 'images/Chapter_2_Image.jpg',
-            imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-            description: 'Income inequality certainly played a role in the uneven distribution of subway usage. By overlaying median household income and change in subway entries it becomes clear that those stations with less change are located in low-income areas, specially in the Bronx and outer Queens and Brooklyn.',
+            imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+            description: 'this is the text for chapter 2',
             location: {
-                center: [-74, 40.725],
+                center: [-73.979, 40.74],
                 zoom: 10,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+                {
+            id: 'ch3',
+            title: 'Chapter 3',
+            image: 'images/Chapter_3_Image.jpg',
+            imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+            description: 'this is the text for chapter 3',
+            location: {
+                center: [-73.979, 40.74],
+                zoom: 10,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+                        {
+            id: 'ch4',
+            title: 'Chapter 4',
+            image: 'images/Chapter_4_Image.jpg',
+            imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+            description: 'this is the text for chapter 4',
+            location: {
+                center: [-73.979, 40.74],
+                zoom: 10,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+                {
+            id: 'ch5',
+            title: 'Chapter 5',
+            image: 'images/Chapter_1_Image.jpg',
+            imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+            description: 'this is the text for chapter 5',
+            location: {
+                center: [-73.979, 40.74],
+                zoom: 10,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+                {
+            id: 'ch6',
+            title: 'Chapter 6',
+            image: 'images/Chapter_2_Image.jpg',
+            imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+            description: 'this is the text for chapter 6',
+            location: {
+                center: [-73.979, 40.74],
+                zoom: 10,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+                {
+            id: 'ch7',
+            title: 'Chapter 7',
+            image: 'images/Chapter_3_Image.jpg',
+            imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+            description: 'this is the text for chapter 7',
+            location: {
+                center: [-73.979, 40.74],
+                zoom: 10,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+                {
+            id: 'ch8',
+            title: 'Chapter 8',
+            image: 'images/Chapter_4_Image.jpg',
+            imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+            description: 'this is the text for chapter 8',
+            location: {
+                center: [-73.979, 40.74],
+                zoom: 20,
                 pitch: 0,
                 bearing: 0
             },
             onChapterEnter: [
                 {
-                    layer: 'medianIncome',
+                    layer: 'midtown',
+                    opacity: 0.15,
+                    layer: 'supertallheights',
                     opacity: 1
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'medianIncome',
+                    layer: 'midtown',
+                    opacity: 0,
+                    layer: 'supertallheights',
                     opacity: 0
                 }
             ]
         },
-        {
-            id: 'elmhurstHospital',
-            title: 'The epicenter of the outbreak',
-            image: 'images/Chapter_3_Image.jpg',
-            imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-            description: 'Elmhurst Hospital Center has been identified as one of the hospitals most overwhelmed by the number of patients with COVID-19 it has received. Located in a low-middle-income area of the city, with a median household income of around $50,000, the hospital serves one of the most diverse and immigrant dense areas of the city. The three subway stations around the hospital have all seen relatively small change in their usage compare to the rest of the city.',
+                {
+            id: 'ch9',
+            title: 'Chapter 9',
+            image: 'images/Chapter_1_Image.jpg',
+            imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+            description: 'this is the text for chapter 9',
             location: {
-                center: [-73.886201, 40.744566],
-                zoom: 16,
-                pitch: 40,
-                bearing: -7
+                center: [-73.979, 40.74],
+                zoom: 10,
+                pitch: 0,
+                bearing: 0
             },
-            onChapterEnter: [
-                {
-                    layer: 'medianIncome',
-                    opacity: 0
-                }
-            ],
-            onChapterExit: [
-                {
-                    layer: 'medianIncome',
-                    opacity: 0
-                }
-            ]
+            onChapterEnter: [],
+            onChapterExit: []
         },
-        {
-            id: 'southBronx',
-            title: 'The South Bronx, as Always',
-            image: 'images/Chapter_4_Image.jpg',
-            imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-            description: "The South Bronx, perennially marred in social injustice, has also been hard hit during the current COVID-19 outbreak. The area's three main neighborhoods, Mott Haven, Melrose and Port Morris are mostly home to low-income families that have been forced to continue going to work, risking their health and that of their loved ones. Similarly to Jackson Heights in Queens, the areas subway stations have seen a smaller decrease in use than the rest of the city. Median household income in this area oscillates between $15,000 and $30,000.",
-            location: {
-                center: [-73.918037, 40.816093],
-                zoom: 15,
-                pitch: 40,
-                bearing: 8
-            },
-            onChapterEnter: [
-                {
-                    layer: 'medianIncome',
-                    opacity: 1
-                }
-            ],
-            onChapterExit: [
-                {
-                    layer: 'medianIncome',
-                    opacity: 0
-                }
-            ]
-        }
+ 
     ]
 };

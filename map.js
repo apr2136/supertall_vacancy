@@ -189,54 +189,88 @@ map.on("load", function () {
             break;
         }
     }
-    // Add the first new layer
-    map.addLayer({
-        'id': 'turnstileData',
-        'type': 'circle',
-        'source': {
-            'type': 'geojson',
-            'data': 'data/turnstileData.geojson'
-        },
-        'paint': {
-            'circle-color': ['interpolate', ['linear'], ['get', 'ENTRIES_DIFF'],
-                -1, '#ff4400',
-                -0.7, '#ffba31',
-                -0.4, '#ffffff'
-            ],
-            'circle-stroke-color': '#4d4d4d',
-            'circle-stroke-width': 0.5,
-            'circle-radius': ['interpolate', ['exponential', 2], ['zoom'],
-                10, ['interpolate', ['linear'], ['get', 'ENTRIES_DIFF'],
-                    -1, 10,
-                    -0.4, 1
-                ],
-                15, ['interpolate', ['linear'], ['get', 'ENTRIES_DIFF'],
-                    -1, 25,
-                    -0.4, 12
-                ]
-            ],
-        }
-    }, firstSymbolId);
+    // // Add the first new layer
+    // map.addLayer({
+    //     'id': 'turnstileData',
+    //     'type': 'circle',
+    //     'source': {
+    //         'type': 'geojson',
+    //         'data': 'data/turnstileData.geojson'
+    //     },
+    //     'paint': {
+    //         'circle-color': ['interpolate', ['linear'], ['get', 'ENTRIES_DIFF'],
+    //             -1, '#ff4400',
+    //             -0.7, '#ffba31',
+    //             -0.4, '#ffffff'
+    //         ],
+    //         'circle-stroke-color': '#4d4d4d',
+    //         'circle-stroke-width': 0.5,
+    //         'circle-radius': ['interpolate', ['exponential', 2], ['zoom'],
+    //             10, ['interpolate', ['linear'], ['get', 'ENTRIES_DIFF'],
+    //                 -1, 10,
+    //                 -0.4, 1
+    //             ],
+    //             15, ['interpolate', ['linear'], ['get', 'ENTRIES_DIFF'],
+    //                 -1, 25,
+    //                 -0.4, 12
+    //             ]
+    //         ],
+    //     }
+    // }, firstSymbolId);
     // Add the second new layer
+    // map.addLayer({
+    //     'id': 'medianIncome',
+    //     'type': 'fill',
+    //     'source': {
+    //         'type': 'geojson',
+    //         'data': 'data/medianIncome.geojson'
+    //     },
+    //     'opacity': 0,
+    //     'paint': {
+    //         'fill-color': ['step', ['get', 'MHHI'],
+    //             '#ffffff',
+    //             20000, '#ccedf5',
+    //             50000, '#99daea',
+    //             75000, '#66c7e0',
+    //             100000, '#33b5d5',
+    //             150000, '#00a2ca'],
+    //         'fill-opacity': 0
+    //     }
+    // }, 'waterway-shadow');
+
     map.addLayer({
-        'id': 'medianIncome',
+        'id': 'midtown',
         'type': 'fill',
         'source': {
             'type': 'geojson',
-            'data': 'data/medianIncome.geojson'
+            'data': 'data/ch8/midtown.geojson'
         },
-        'opacity': 0,
         'paint': {
-            'fill-color': ['step', ['get', 'MHHI'],
-                '#ffffff',
-                20000, '#ccedf5',
-                50000, '#99daea',
-                75000, '#66c7e0',
-                100000, '#33b5d5',
-                150000, '#00a2ca'],
-            'fill-opacity': 0
+            'fill-color':'#808080',
+            'fill-opacity': 0.15
+        },
+    }, firstSymbolId);
+
+    map.addLayer({
+        
+        'id': 'supertallheights',
+        'type': 'fill',
+        'source': {
+            'type': 'geojson',
+            'data': 'data/ch8/supertallheights.geojson'
+        },
+        'paint': {
+            'fill-color': ['step', ['get', 'heightroof'],
+                '#3182bd',
+                250, '#add8e6',
+                400, '#3182bd',
+                600, '#152238',
+                900, '#152238',
+                    ],
+            'fill-opacity': 1
         }
-    }, 'waterway-shadow');
+    }, firstSymbolId);
+
     // Setup the instance, pass callback functions
     scroller
         .setup({
