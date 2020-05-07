@@ -191,6 +191,30 @@ tutorial. At the end, however, we setup the functions that will tie the
 scrolling to the chapters and move the map from one location to another
 while changing the zoom level, pitch and bearing */
 
+  // Create the popup
+map.on('click', 'recordingLocations', function (e) {
+    console.log('mouse click!')
+    var entriesDiff = 'diff'//e.features[0].properties.ENTRIES_DIFF;
+    var entries_06 = 'v06'//e.features[0].properties.ENTRIES_06;
+    var entries_20 = 'v20'//e.features[0].properties.ENTRIES_20;
+    var stationName = 'station'//e.features[0].properties.stationName;
+    new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML('<h4>' + stationName + '</h4>'
+            + '<p><b>Friday, March 6th:</b> ' + entries_06 + ' entries<br>'
+            + '<b>Friday, March 20th:</b> ' + entries_20 + ' entries<br>'
+            + '<b>Change:</b> ' + Math.round(entriesDiff * 1000) / 10 + '%</p>')
+        .addTo(map);
+});
+// Change the cursor to a pointer when the mouse is over the turnstileData layer.
+map.on('mouseenter', 'recordingLocations', function () {
+    map.getCanvas().style.cursor = 'pointer';
+});
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'recordingLocations', function () {
+    map.getCanvas().style.cursor = '';
+});
+
 map.on("load", function() {
   // This is the function that finds the first symbol layer
   var layers = map.getStyle().layers;
@@ -459,10 +483,34 @@ map.on("load", function() {
     },
       paint: {
         "fill-color": colorGradient[4],
-        "fill-opacity": 0
+        "fill-opacity": 1
       }
-    });
+    },firstSymbolId);  
   
+map.on('click', function(e) {
+  console.log("hit the logging thing")
+// set bbox as 5px reactangle area around clicked point
+var bbox = [
+[e.point.x - 5, e.point.y - 5],
+[e.point.x + 5, e.point.y + 5]
+];
+var features = map.queryRenderedFeatures(bbox, {
+layers: ['recordingLocations']
+});
+ 
+// Run through the selected features and set a filter
+// to match features with unique FIPS codes to activate
+// the `counties-highlighted` layer.
+var filter = features.reduce(
+function(memo, feature) {
+memo.push(feature.properties.FIPS);
+return memo;
+},
+['in', 'FIPS']
+);
+ 
+map.setFilter('counties-highlighted', filter);
+});  
 
   // Setup the instance, pass callback functions
   scroller
@@ -493,32 +541,12 @@ map.on("load", function() {
         chapter.onChapterExit.forEach(setLayerOpacity);
       }
     });
+  
+
+  
 });
 
 /* Here we watch for any resizing of the screen to
 adjust our scrolling setup */
 window.addEventListener("resize", scroller.resize);
 
-// Create the popup
-map.on('click', 'recordingLocations', function (e) {
-    console.log('mouse click!')
-    var entriesDiff = 'diff'//e.features[0].properties.ENTRIES_DIFF;
-    var entries_06 = 'v06'//e.features[0].properties.ENTRIES_06;
-    var entries_20 = 'v20'//e.features[0].properties.ENTRIES_20;
-    var stationName = 'station'//e.features[0].properties.stationName;
-    new mapboxgl.Popup()
-        .setLngLat(e.lngLat)
-        .setHTML('<h4>' + stationName + '</h4>'
-            + '<p><b>Friday, March 6th:</b> ' + entries_06 + ' entries<br>'
-            + '<b>Friday, March 20th:</b> ' + entries_20 + ' entries<br>'
-            + '<b>Change:</b> ' + Math.round(entriesDiff * 1000) / 10 + '%</p>')
-        .addTo(map);
-});
-// Change the cursor to a pointer when the mouse is over the turnstileData layer.
-map.on('mouseenter', 'recordingLocations', function () {
-    map.getCanvas().style.cursor = 'pointer';
-});
-// Change it back to a pointer when it leaves.
-map.on('mouseleave', 'recordingLocations', function () {
-    map.getCanvas().style.cursor = '';
-});

@@ -218,28 +218,18 @@ var config = {
       title: "Chapter 9",
       image: "images/Chapter_1_Image.jpg",
       imageCredit: "<a href=source</a>",
-      description:  `
-      <audio controls autoplay id="audio-control">
-        <source src="audio/vinoly_tower_residential.m4a" type="audio/mpeg">
-        Your browser does not support the audio tag.
-      </audio>`,
+      description: "description",
       location: {
         center: [-73.98131, 40.76117],
-        zoom: 14.61,
+        zoom: 15.61,
         pitch: 0,
         bearing: 0
       },
       onChapterEnter: [
-        {
-          layer: "recordingLocations",
-          opacity: 0.5
-        }
+
       ],
       onChapterExit: [
-        {
-          layer: "recordingLocations",
-          opacity: 0
-        }
+
       ],
     }
   ]
