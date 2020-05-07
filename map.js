@@ -254,7 +254,21 @@ map.on("load", function () {
     // var buildings = map.getLayer('building-extrusion')
     // buildings['paint']['fill-extrusion-color']  = '#add8e6'
     // buildings['paint']['fill-extrusion-opacity']  = 1
-    map.setPaintProperty('building-extrusion', 'fill-extrusion-color', '#add8e6');
+    map.setPaintProperty('building-extrusion', 'fill-extrusion-color', ['step', ['get', 'height'],
+                '#3182bd',
+                250*0.3048, '#add8e6',
+                400*0.3048, '#3182bd',
+                600*0.3048, '#152238',
+                900*0.3048, '#152238',
+        ])
+  
+  // 'fill-color': ['step', ['get', 'heightroof'],
+  //               '#3182bd',
+  //               250, '#add8e6',
+  //               400, '#3182bd',
+  //               600, '#152238',
+  //               900, '#152238',
+  //       ]
 
     // map.addLayer({
     //     'id': 'building-extrusion_custom',
