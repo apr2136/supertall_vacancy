@@ -97,7 +97,7 @@ var config = {
     {
       id: "ch5",
       title: "Chapter 5",
-      image: "images/Chapter_1_Image.jpg",
+      image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_5_Image.png?v=1588873080395",
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
       description: "Midtown forms an interesting pivot in understanding the relation between the high rents and yet higher vacancy rates. Looking into the history, the midtown zone was initially proposed as a hub for trade and commerce, developing over the years, this area got a reputation of high rise commercial buildings, some mixed use buildings but very few apartment buildings. ",
       location: {
@@ -122,7 +122,7 @@ var config = {
     {
       id: "ch6",
       title: "Chapter 6",
-      image: "images/Chapter_2_Image.jpg",
+      image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_5_Image.png?v=1588873080395",
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
       description: "Out of several Bloomberg’s 2013 rezoning policies for NYC, one of the neighbourhood’s that was impacted was Midtown. The commercial lots were given incentives of higher FSI and to build twice as tall in return of addition of housing and privately owned public spaces to accommodate and invite estate investors and corporate tenants.",
       location: {
