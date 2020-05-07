@@ -98,7 +98,7 @@ var config = {
     {
       id: "ch5",
       title: "Chapter 5",
-      image: "images/Chapter_1_Image.jpg",
+      image: "images/Chapter_5_Image.png",
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
       description: "this is the text for chapter 5",
       location: {
