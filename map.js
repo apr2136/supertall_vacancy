@@ -182,6 +182,10 @@ while changing the zoom level, pitch and bearing */
 map.on("load", function () {
     // This is the function that finds the first symbol layer
     var layers = map.getStyle().layers;
+    for (var i = 0; i < layers.length; i++) {
+        console.log(layers[i].id);
+    }  
+  
     var firstSymbolId;
     for (var i = 0; i < layers.length; i++) {
         if (layers[i].type === 'symbol') {
@@ -267,7 +271,7 @@ map.on("load", function () {
                 600, '#152238',
                 900, '#152238',
                     ],
-            'fill-opacity': 0
+            'fill-opacity': 1
         }
     }, 'waterway-shadow');
 
