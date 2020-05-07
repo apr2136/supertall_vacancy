@@ -16,15 +16,25 @@ var config = {
             image: 'images/Chapter_1_Image.jpg',
             imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
             description: 'this is the text for chapter 1',
+            // 14.61/40.76117/-73.98131
             location: {
-                center: [-73.979, 40.74],
-                zoom: 10,
+                center: [-73.98131, 40.76117],
+                zoom: 14.61,
                 pitch: 0,
                 bearing: 0
             },
-            onChapterEnter: [  
+            onChapterEnter: [
+                {
+                    layer: 'MGR_Joined',
+                    opacity: 1,
+                }
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {
+                    layer: 'MGR_Joined',
+                    opacity: 0,
+                }
+            ]
         },
         {
             id: 'ch2',
@@ -33,13 +43,23 @@ var config = {
             imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
             description: 'this is the text for chapter 2',
             location: {
-                center: [-73.979, 40.74],
-                zoom: 10,
+                center: [-73.98131, 40.76117],
+                zoom: 14.61,
                 pitch: 0,
                 bearing: 0
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer: 'vacancy_rate',
+                    opacity: 1,
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'vacancy_rate',
+                    opacity: 0,
+                }
+            ]
         },
                 {
             id: 'ch3',
@@ -48,13 +68,23 @@ var config = {
             imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
             description: 'this is the text for chapter 3',
             location: {
-                center: [-73.979, 40.74],
-                zoom: 10,
+                center: [-73.98131, 40.76117],
+                zoom: 14.61,
                 pitch: 0,
                 bearing: 0
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer: 'midtown',
+                    opacity: 0.15,
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'midtown',
+                    opacity: 0,
+                }
+            ]
         },
                         {
             id: 'ch4',
@@ -63,13 +93,23 @@ var config = {
             imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
             description: 'this is the text for chapter 4',
             location: {
-                center: [-73.979, 40.74],
-                zoom: 10,
+                center: [-73.98131, 40.76117],
+                zoom: 14.61,
                 pitch: 0,
                 bearing: 0
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer: 'midtown',
+                    opacity: 0.15,
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'midtown',
+                    opacity: 0,
+                }
+            ]
         },
                 {
             id: 'ch5',
@@ -78,13 +118,23 @@ var config = {
             imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
             description: 'this is the text for chapter 5',
             location: {
-                center: [-73.979, 40.74],
-                zoom: 10,
+                center: [-73.98131, 40.76117],
+                zoom: 14.61,
                 pitch: 0,
                 bearing: 0
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer: 'landuseA',
+                    opacity: 0.5,
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'landuseA',
+                    opacity: 0,
+                }
+            ]
         },
                 {
             id: 'ch6',
@@ -93,13 +143,23 @@ var config = {
             imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
             description: 'this is the text for chapter 6',
             location: {
-                center: [-73.979, 40.74],
-                zoom: 10,
+                center: [-73.98131, 40.76117],
+                zoom: 14.61,
                 pitch: 0,
                 bearing: 0
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer: 'landuseB',
+                    opacity: 0.5,
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'landuseB',
+                    opacity: 0,
+                }
+            ]
         },
                 {
             id: 'ch7',
@@ -108,13 +168,31 @@ var config = {
             imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
             description: 'this is the text for chapter 7',
             location: {
-                center: [-73.979, 40.74],
-                zoom: 10,
+                center: [-73.98131, 40.76117],
+                zoom: 14.61,
                 pitch: 0,
                 bearing: 0
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer: 'landuseA4',
+                    opacity: 1,
+                },
+                {
+                    layer: 'landuseB4',
+                    opacity: 1,
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'landuseA4',
+                    opacity: 0.5,
+                },
+                {
+                    layer: 'landuseB4',
+                    opacity: 0,
+                }
+            ]
         },
                 {
             id: 'ch8',
@@ -131,15 +209,23 @@ var config = {
             },
             onChapterEnter: [
                 {
+                    layer: 'supertallheights',
+                    opacity: 0.15,
+                },
+                {
                     layer: 'midtown',
                     opacity: 0.15,
-                }
+                },
             ],
             onChapterExit: [
                 {
+                    layer: 'supertallheights',
+                    opacity: 0,
+                },
+                {
                     layer: 'midtown',
                     opacity: 0,
-                }
+                },
             ]
         },
                 {
@@ -149,14 +235,14 @@ var config = {
             imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
             description: 'this is the text for chapter 9',
             location: {
-                center: [-73.979, 40.74],
-                zoom: 10,
+                center: [-73.98131, 40.76117],
+                zoom: 14.61,
                 pitch: 0,
                 bearing: 0
             },
             onChapterEnter: [],
             onChapterExit: []
         },
- 
+
     ]
 };
