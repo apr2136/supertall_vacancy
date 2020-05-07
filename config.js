@@ -1,6 +1,5 @@
 var config = {
-  accessToken:
-    "pk.eyJ1IjoiYXByMjEzNiIsImEiOiJjazlybGZ0ZXMwdm96M2dxcW9wZG80Y2U2In0.75zqiYgqoLeBbjywrfP9nQ",
+  accessToken: "pk.eyJ1IjoiYXByMjEzNiIsImEiOiJjazlybGZ0ZXMwdm96M2dxcW9wZG80Y2U2In0.75zqiYgqoLeBbjywrfP9nQ",
   style: "mapbox://styles/apr2136/ck8ad7yrh0jt91inta8gopadd",
   theme: "light",
   alignment: "left",
