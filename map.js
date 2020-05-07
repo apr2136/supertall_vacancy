@@ -174,6 +174,9 @@ var map = new mapboxgl.Map({
 // Instantiates the scrollama function
 var scroller = scrollama();
 
+// color gradient
+var colors = ['#845ec2','#d65db1','#ff6f91','#ff9671','#ffc75f','#f9f871']
+var defaultColor = '#d3d3d3'
 /* Here we add the two extra layers we are using, just like in our previous
 tutorial. At the end, however, we setup the functions that will tie the
 scrolling to the chapters and move the map from one location to another
@@ -190,15 +193,7 @@ map.on("load", function () {
         }
     }
 
-    /**********************
-          ['step', ['get', 'heightroof'],
-                '#3182bd',
-                0*0.3048, '#adadad',
-                250*0.3048, '#add8e6',
-                400*0.3048, '#3182bd',
-                600*0.3048, '#152238',
-                900*0.3048, '#152238',
-        ],    
+    /********************** 
     // chapter 1
     ***********************/
     map.addLayer({
@@ -211,12 +206,12 @@ map.on("load", function () {
         'paint': {
             'fill-color': [
                 'step', ['get', 'Rent'],
-                '#0004fb',
-                1000, '#4800fb',
-                1500, '#9300fb',
-                2000,'#f900fb',
-                2500,'#fb0058', 
-                3000,'#fb0000'
+                defaultColor,
+                1000, colors[2],
+                1500, colors[3],
+                2000, colors[4],
+                2500, colors[5], 
+                3000,
             ],
             'fill-opacity' : 0,
             'fill-outline-color': '#ffffff'
