@@ -251,23 +251,19 @@ map.on("load", function () {
         },
     }, 'waterway-shadow');
 
-    var buildings = map.getLayer('building-extrusion')
-    buildings['paint']['fill-extrusion-color']  ='#add8e6'
+    // var buildings = map.getLayer('building-extrusion')
+    // buildings['paint']['fill-extrusion-color']  = '#add8e6'
+    // buildings['paint']['fill-extrusion-opacity']  = 1
+
+    map.addLayer({
+        'id': 'building-extrusion_custom',
+        'type': 'fill-extrusion',
+        'source': 'buildings',
+        'paint': {
+            'fill-extrusion-color':'#add8e6',
             'fill-extrusion-opacity': 1
         }
-//     map.addLayer({
-        
-//         'id': 'building-extrusion',
-//         'type': 'fill-extrusion',
-//         'source': {
-//             'type': 'tileset',
-//             'data': 'https://studio.mapbox.com/tilesets/mapbox.mapbox-streets-v8/building'
-//         },
-//         'paint': {
-//             'fill-extrusion-color':'#add8e6',
-//             'fill-extrusion-opacity': 1
-//         }
-//     }, 'waterway-shadow');
+    }, 'waterway-shadow');
 
     // Setup the instance, pass callback functions
     scroller
