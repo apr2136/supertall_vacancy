@@ -191,7 +191,6 @@ tutorial. At the end, however, we setup the functions that will tie the
 scrolling to the chapters and move the map from one location to another
 while changing the zoom level, pitch and bearing */
 
-
 map.on("load", function() {
   // This is the function that finds the first symbol layer
   var layers = map.getStyle().layers;
@@ -451,68 +450,40 @@ map.on("load", function() {
   /**********************
     // chapter 9
     ***********************/
-//     map.addLayer({
-//     id: "recordingLocations",
-//     type: "fill",
-//     source: {
-//       type: "geojson",
-//       data: "data/ch8/supertallheights.geojson"
-//     },
-//       paint: {
-//         "fill-color": colorGradient[4],
-//         "fill-opacity": 1
-//       }
-//     },firstSymbolId);  
+    map.addLayer({
+    id: "recordingLocations",
+    type: "fill",
+    source: {
+      type: "geojson",
+      data: "data/ch8/supertallheights.geojson"
+    },
+      paint: {
+        "fill-color": "#808080",
+        "fill-opacity": 0
+      }
+    },
+    "waterway-shadow");
   
-      map.addLayer({
-        'id': 'turnstileData',
-        'type': 'circle',
-        'source': {
-            'type': 'geojson',
-            'data': 'data/turnstileData.geojson'
-        },
-        'paint': {
-            'circle-color': ['interpolate', ['linear'],
-                ['get', 'ENTRIES_DIFF'], -1, '#ff4400', -0.7, '#ffba31', -0.4, '#ffffff'
-            ],
-            'circle-stroke-color': '#4d4d4d',
-            'circle-stroke-width': 0.5,
-            'circle-radius': ['interpolate', ['exponential', 2],
-                ['zoom'],
-                10, ['interpolate', ['linear'],
-                    ['get', 'ENTRIES_DIFF'], -1, 10, -0.4, 1
-                ],
-                15, ['interpolate', ['linear'],
-                    ['get', 'ENTRIES_DIFF'], -1, 25, -0.4, 12
-                ]
-            ],
-        }
-    }, firstSymbolId);
-  
-// map.on('click', function(e) {
-//   console.log("hit the logging thing")
-// // set bbox as 5px reactangle area around clicked point
-// var bbox = [
-// [e.point.x - 5, e.point.y - 5],
-// [e.point.x + 5, e.point.y + 5]
-// ];
-// var features = map.queryRenderedFeatures(bbox, {
-// layers: ['recordingLocations']
-// });
- 
-// // Run through the selected features and set a filter
-// // to match features with unique FIPS codes to activate
-// // the `counties-highlighted` layer.
-// var filter = features.reduce(
-// function(memo, feature) {
-// memo.push(feature.properties.FIPS);
-// return memo;
-// },
-// ['in', 'FIPS']
-// );
- 
-// map.setFilter('counties-highlighted', filter);
-// });  
+  map.on("click", function(e) {
+    // set bbox as 5px reactangle area around clicked point
+    var bbox = [[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]];
+    var features = map.queryRenderedFeatures(bbox, {
+      layers: ["counties"]
+    });
+
+    // Run through the selected features and set a filter
+    // to match features with unique FIPS codes to activate
+    // the `counties-highlighted` layer.
+    var filter = features.reduce(
+      function(memo, feature) {
+        memo.push(feature.properties.FIPS);
+        return memo;
+      },
+      ["in", "FIPS"]
+    );
+
+    // map.setFilter("counties-highlighted", filter);
+  });
 
   // Setup the instance, pass callback functions
   scroller
@@ -543,68 +514,8 @@ map.on("load", function() {
         chapter.onChapterExit.forEach(setLayerOpacity);
       }
     });
-  
-
-  
 });
-
-// Create the popup
-map.on('click', 'turnstileData', function (e) {
-    var entriesDiff = e.features[0].properties.ENTRIES_DIFF;
-    var entries_06 = e.features[0].properties.ENTRIES_06;
-    var entries_20 = e.features[0].properties.ENTRIES_20;
-    var stationName = e.features[0].properties.stationName;
-    new mapboxgl.Popup()
-        .setLngLat(e.lngLat)
-        .setHTML('<h4>' + stationName + '</h4>'
-            + '<p><b>Friday, March 6th:</b> ' + entries_06 + ' entries<br>'
-            + '<b>Friday, March 20th:</b> ' + entries_20 + ' entries<br>'
-            + '<b>Change:</b> ' + Math.round(entriesDiff * 1000) / 10 + '%</p>')
-        .addTo(map);
-});
-// Change the cursor to a pointer when the mouse is over the turnstileData layer.
-map.on('mouseenter', 'turnstileData', function () {
-    map.getCanvas().style.cursor = 'pointer';
-});
-// Change it back to a pointer when it leaves.
-map.on('mouseleave', 'turnstileData', function () {
-    map.getCanvas().style.cursor = '';
-});
-
-
-var toggleableLayerIds = ['turnstileData'];
-
-
-for (var i = 0; i < toggleableLayerIds.length; i++) {
-    var id = toggleableLayerIds[i];
-
-    var link = document.createElement('a');
-    link.href = '#';
-    link.className = 'active';
-    link.textContent = id;
-
-    link.onclick = function(e) {
-        var clickedLayer = this.textContent;
-        e.preventDefault();
-        e.stopPropagation();
-
-        var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
-
-        if (visibility === 'visible') {
-            map.setLayoutProperty(clickedLayer, 'visibility', 'none');
-            this.className = '';
-        } else {
-            this.className = 'active';
-            map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
-        }
-    };
-
-    var layers = document.getElementById('menu');
-    layers.appendChild(link);
-}
-
 
 /* Here we watch for any resizing of the screen to
 adjust our scrolling setup */
 window.addEventListener("resize", scroller.resize);
-
