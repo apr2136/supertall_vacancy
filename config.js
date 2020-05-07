@@ -22,7 +22,8 @@ var config = {
                 pitch: 0,
                 bearing: 0
             },
-            onChapterEnter: [],
+            onChapterEnter: [  
+            ],
             onChapterExit: []
         },
         {
@@ -125,7 +126,7 @@ var config = {
               // 15.81/40.757235/-73.983602/0/41
                 center: [-73.983602, 40.757235],
                 zoom: 15.81,
-                pitch: 41,
+                pitch: 0,
                 bearing: 0
             },
             onChapterEnter: [

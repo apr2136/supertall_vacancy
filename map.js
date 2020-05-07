@@ -247,7 +247,7 @@ map.on("load", function () {
         },
         'paint': {
             'fill-color':'#808080',
-            'fill-opacity': 0.15
+            'fill-opacity': 0
         },
     }, 'waterway-shadow');
 
@@ -267,7 +267,7 @@ map.on("load", function () {
                 600, '#152238',
                 900, '#152238',
                     ],
-            'fill-opacity': 1
+            'fill-opacity': 0
         }
     }, 'waterway-shadow');
 
