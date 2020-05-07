@@ -217,7 +217,7 @@ map.on("load", function () {
             ],
             'fill-outline-color': '#ffffff'
         }
-    }'waterway-shadow');
+    },'waterway-shadow');
 
     /**********************
     // chapter 2
@@ -227,7 +227,7 @@ map.on("load", function () {
         'type': 'fill',
         'source': {
             'type': 'geojson',
-            'data': 'data/ch4/vacancy_rate.geojson'
+            'data': 'data/ch2/vacancy_rate.geojson'
         },
         'paint': {
             'fill-color': [
@@ -241,7 +241,7 @@ map.on("load", function () {
             ],
             'fill-outline-color': '#ffffff'
         }
-    }'waterway-shadow');
+    }, 'waterway-shadow');
 
     /**********************
     // chapter 3
@@ -280,7 +280,7 @@ map.on("load", function () {
                 '#ffffff',
         ],'fill-opacity': 0,
         }
-    }'waterway-shadow');
+    }, 'waterway-shadow');
 
     /**********************
     // chapter 6
@@ -290,7 +290,7 @@ map.on("load", function () {
         'type': 'fill',
         'source': {
             'type': 'geojson',
-            'data': 'data/ch/6landuseB.geojson'
+            'data': 'data/ch6/landuseB.geojson'
         },
         'paint': {
             'fill-color': ['match', ['get', 'landUse2'],
@@ -301,7 +301,7 @@ map.on("load", function () {
                 '#ffffff',
         ],'fill-opacity': 0.5
         },
-    }'waterway-shadow');
+    }, 'waterway-shadow');
 
     /**********************
     // chapter 7
