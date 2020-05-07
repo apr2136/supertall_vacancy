@@ -210,11 +210,7 @@ map.on("load", function () {
                 '#fb0058', 3000,
                 '#fb0000'
             ],
-            'fill-opacity' : [
-                'match', ['get', 'Rent'],
-                0,0,
-                1,
-            ],
+            'fill-opacity' : 0,
             'fill-outline-color': '#ffffff'
         }
     },'waterway-shadow');
@@ -239,7 +235,8 @@ map.on("load", function () {
                 '#fb0058', 50,
                 '#fb0000'
             ],
-            'fill-outline-color': '#ffffff'
+            'fill-outline-color': '#ffffff',
+          'fill-opacity': 0,
         }
     }, 'waterway-shadow');
 
@@ -299,7 +296,7 @@ map.on("load", function () {
                 '04', '#e34a33',
                 '05', '#fdbb84',
                 '#ffffff',
-        ],'fill-opacity': 0.5
+        ],'fill-opacity': 0
         },
     }, 'waterway-shadow');
 
@@ -372,7 +369,6 @@ map.on("load", function () {
         'paint': {
             'fill-extrusion-height': [ '*',['get', 'heightroof'], 0.3048],//convert to meters
             'fill-extrusion-color':
-
           ['step', ['get', 'heightroof'],
                 '#3182bd',
                 0*0.3048, '#adadad',

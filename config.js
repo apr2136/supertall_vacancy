@@ -73,18 +73,8 @@ var config = {
                 pitch: 0,
                 bearing: 0
             },
-            onChapterEnter: [
-                {
-                    layer: 'midtown',
-                    opacity: 0.15,
-                }
-            ],
-            onChapterExit: [
-                {
-                    layer: 'midtown',
-                    opacity: 0,
-                }
-            ]
+            onChapterEnter: [],
+            onChapterExit: []
         },
                         {
             id: 'ch4',
@@ -98,18 +88,8 @@ var config = {
                 pitch: 0,
                 bearing: 0
             },
-            onChapterEnter: [
-                {
-                    layer: 'midtown',
-                    opacity: 0.15,
-                }
-            ],
-            onChapterExit: [
-                {
-                    layer: 'midtown',
-                    opacity: 0,
-                }
-            ]
+            onChapterEnter: [],
+            onChapterExit: []
         },
                 {
             id: 'ch5',
@@ -180,13 +160,13 @@ var config = {
                 },
                 {
                     layer: 'landuseB4',
-                    opacity: 1,
+                    opacity: 0.5,
                 }
             ],
             onChapterExit: [
                 {
                     layer: 'landuseA4',
-                    opacity: 0.5,
+                    opacity: 0,
                 },
                 {
                     layer: 'landuseB4',
@@ -209,23 +189,17 @@ var config = {
             },
             onChapterEnter: [
                 {
-                    layer: 'supertallheights',
-                    opacity: 0.15,
-                },
-                {
                     layer: 'midtown',
                     opacity: 0.15,
                 },
+            
             ],
             onChapterExit: [
                 {
-                    layer: 'supertallheights',
-                    opacity: 0,
-                },
-                {
                     layer: 'midtown',
                     opacity: 0,
                 },
+            
             ]
         },
                 {
