@@ -516,6 +516,13 @@ map.on("load", function() {
     });
 });
 
+// Listen for a click on the map
+map.on('click', function(e) {
+  // When the map is clicked, add a new drop-off point
+  // and update the `dropoffs-symbol` layer
+  console.log("a click")
+});
+
 /* Here we watch for any resizing of the screen to
 adjust our scrolling setup */
 window.addEventListener("resize", scroller.resize);
