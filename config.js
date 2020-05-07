@@ -125,7 +125,7 @@ var config = {
       title: "Chapter 6",
       image: "images/Chapter_2_Image.jpg",
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
-      description: "Out of several Bloomberg’s 2013 rezoning policies for NYC, one of the neighbourhood’s that was impacted was Midtown. The commercial lots were given incentives of higher FSI and to build twice as tall in return of addition of housing and privately owned public spaces to accommodate and invite estate investors and corporate tenants. ",
+      description: "Out of several Bloomberg’s 2013 rezoning policies for NYC, one of the neighbourhood’s that was impacted was Midtown. The commercial lots were given incentives of higher FSI and to build twice as tall in return of addition of housing and privately owned public spaces to accommodate and invite estate investors and corporate tenants.",
       location: {
         center: [-73.996, 40.756],
         zoom: 13.95,
@@ -150,7 +150,7 @@ var config = {
       title: "Chapter 7",
       image: "images/Chapter_3_Image.jpg",
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
-      description: "As a result, the mixed use lots drastically increased as much as twice the footprint from the year 2000 to 2017, as a resultant of several commercial lots adding housing wings that allow them to go taller. The number of flats available for rent surged up but also increasing the rental value of these apartments.",
+      description: "As a result, the mixed use lots drastically increased as much as twice the footprint from the year 2000 to 2017. Several commercial lots are adding housing wings that allow them to go taller. A high concentration of these mixed use buildings can be observed developing in the north of this midtown zone, emerging to become one of the highest estate value streets of Manhattan, Billionaire's row. The number of flats available for rent in this row surged up but also increasing the rental value of these apartments.",
       location: {
         center: [-73.986, 40.761],
         zoom: 14.66,
