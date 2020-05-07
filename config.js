@@ -98,9 +98,9 @@ var config = {
     {
       id: "ch5",
       title: "Chapter 5",
-      image: "images/Chapter_1_Image.jpg",
+      image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_5_Image.png?v=1588873080395,
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
-      description: "this is the text for chapter 5",
+      description: "Midtown forms an interesting pivot in understanding the relation between the high rents and yet higher vacancy rates. Looking into the history, the midtown zone was initially proposed as a hub for trade and commerce, developing over the years, this area got a reputation of high rise commercial buildings, some mixed use buildings but very few apartment buildings. ",
       location: {
         center: [-73.996, 40.756],
         zoom: 13.95,
