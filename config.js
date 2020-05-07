@@ -230,8 +230,16 @@ var config = {
         bearing: 0
       },
       onChapterEnter: [
+        {
+          layer: "recordingLocations",
+          opacity: 0.5
+        }
       ],
       onChapterExit: [
+        {
+          layer: "recordingLocations",
+          opacity: 0
+        }
       ],
     }
   ]
