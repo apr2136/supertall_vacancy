@@ -22,7 +22,7 @@ var config = {
       description: "this is the text for chapter 1",
       // 14.61/40.76117/-73.98131
       location: {
-        center: [-74.004, 40.767],
+        center: [-74.025, 40.774],
         zoom: 11.27,
         pitch: 0,
         bearing: 0
@@ -72,8 +72,8 @@ var config = {
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
       description: "this is the text for chapter 3",
       location: {
-        center: [-73.98131, 40.76117],
-        zoom: 14.61,
+        center: [-74.004, 40.767],
+        zoom: 11.27,
         pitch: 0,
         bearing: 0
       },
@@ -87,8 +87,8 @@ var config = {
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
       description: "this is the text for chapter 4",
       location: {
-        center: [-73.98131, 40.76117],
-        zoom: 14.61,
+        center: [-73.996, 40.756],
+        zoom: 13.95,
         pitch: 0,
         bearing: 0
       },
@@ -102,7 +102,7 @@ var config = {
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
       description: "this is the text for chapter 5",
       location: {
-        center: [-74.00, 40.755],
+        center: [-73.996, 40.756],
         zoom: 13.95,
         pitch: 0,
         bearing: 0
@@ -127,8 +127,8 @@ var config = {
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
       description: "this is the text for chapter 6",
       location: {
-        center: [-73.98131, 40.76117],
-        zoom: 14.61,
+        center: [-73.996, 40.756],
+        zoom: 13.95,
         pitch: 0,
         bearing: 0
       },
@@ -152,8 +152,8 @@ var config = {
       imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
       description: "this is the text for chapter 7",
       location: {
-        center: [-73.98131, 40.76117],
-        zoom: 14.61,
+        center: [-73.986, 40.761],
+        zoom: 14.66,
         pitch: 0,
         bearing: 0
       },
