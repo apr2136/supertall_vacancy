@@ -16,8 +16,8 @@ var config = {
     {
       id: "ch1",
       title: "Rent Range in Manhattan",
-      image: "images/Chapter_1_Image.jpg",
-      imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+      image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_1_Image.png?v=1588893819259",
+
       description: "this is the text for chapter 1",
       // 14.61/40.76117/-73.98131
       location: {
@@ -42,8 +42,8 @@ var config = {
     {
       id: "ch2",
       title: "Vacancy Rates in Manhattan",
-      image: "images/Chapter_2_Image.jpg",
-      imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+      image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_2_Image.png?v=1588893818554",
+    
       description: "this is the text for chapter 2",
       location: {
         center: [-74.025, 40.774],
