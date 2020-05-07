@@ -109,13 +109,13 @@ var config = {
       },
       onChapterEnter: [
         {
-          layer: "landuseA",
+          layer: "landuseB",
           opacity: 0.5
         }
       ],
       onChapterExit: [
         {
-          layer: "landuseA",
+          layer: "landuseB",
           opacity: 0
         }
       ]
@@ -134,13 +134,13 @@ var config = {
       },
       onChapterEnter: [
         {
-          layer: "landuseB",
+          layer: "landuseA",
           opacity: 0.5
         }
       ],
       onChapterExit: [
         {
-          layer: "landuseB",
+          layer: "landuseA",
           opacity: 0
         }
       ]

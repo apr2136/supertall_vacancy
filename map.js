@@ -291,38 +291,8 @@ map.on("load", function() {
   /**********************
     // chapter 5
     ***********************/
-  map.addLayer(
-    {
-      id: "landuseA",
-      type: "fill",
-      source: {
-        type: "geojson",
-        data: "data/ch5/landuseA.geojson"
-      },
-      paint: {
-        "fill-color": [
-          "match",
-          ["get", "LandUse"],
-          "02",
-          "#fee8c8",
-          "03",
-          "#fee8c8",
-          "04",
-          "#e34a33",
-          "05",
-          "#fdbb84",
-          "#ffffff"
-        ],
-        "fill-opacity": 0
-      }
-    },
-    "waterway-shadow"
-  );
-
-  /**********************
-    // chapter 6
-    ***********************/
-  map.addLayer(
+  
+    map.addLayer(
     {
       id: "landuseB",
       type: "fill",
@@ -349,7 +319,40 @@ map.on("load", function() {
     },
     "waterway-shadow"
   );
+  
 
+  /**********************
+    // chapter 6
+    ***********************/
+
+    map.addLayer(
+    {
+      id: "landuseA",
+      type: "fill",
+      source: {
+        type: "geojson",
+        data: "data/ch5/landuseA.geojson"
+      },
+      paint: {
+        "fill-color": [
+          "match",
+          ["get", "LandUse"],
+          "02",
+          "#fee8c8",
+          "03",
+          "#fee8c8",
+          "04",
+          "#e34a33",
+          "05",
+          "#fdbb84",
+          "#ffffff"
+        ],
+        "fill-opacity": 0
+      }
+    },
+    "waterway-shadow"
+  );
+  
   /**********************
     // chapter 7
     ***********************/
