@@ -190,38 +190,155 @@ map.on("load", function () {
         }
     }
 
-  //  chapter 7
-map.addLayer({
+    /**********************
+    // chapter 1
+    ***********************/
+    map.addLayer({
+        'id': 'MGR_Joined',
+        'type': 'fill',
+        'source': {
+            'type': 'geojson',
+            'data': 'data/ch1/MGR_Joined_2.geojson'
+        },
+        'paint': {
+            'fill-color': [
+                'step', ['get', 'Rent'],
+                '#0004fb', 1000,
+                '#4800fb', 1500,
+                '#9300fb', 2000,
+                '#f900fb', 2500,
+                '#fb0058', 3000,
+                '#fb0000'
+            ],
+            'fill-opacity' : [
+                'match', ['get', 'Rent'],
+                0,0,
+                1,
+            ],
+            'fill-outline-color': '#ffffff'
+        }
+    }'waterway-shadow');
+
+    /**********************
+    // chapter 2
+    ***********************/
+    map.addLayer({
+        'id': 'vacancy_rate',
+        'type': 'fill',
+        'source': {
+            'type': 'geojson',
+            'data': 'data/ch4/vacancy_rate.geojson'
+        },
+        'paint': {
+            'fill-color': [
+                'step', ['get', 'Vacancy_rate'],
+                '#0004fb', 5,
+                '#4800fb', 10,
+                '#9300fb', 15,
+                '#f900fb', 20,
+                '#fb0058', 50,
+                '#fb0000'
+            ],
+            'fill-outline-color': '#ffffff'
+        }
+    }'waterway-shadow');
+
+    /**********************
+    // chapter 3
+    ***********************/
+    /*
+    map.addLayer({
+    TODO
+    }'waterway-shadow');
+    */
+
+    /**********************
+    // chapter 4
+    ***********************/
+    /*
+    map.addLayer({
+    TODO
+    }'waterway-shadow');
+    */
+
+    /**********************
+    // chapter 5
+    ***********************/
+    map.addLayer({
+       'id': 'landuseA',
+        'type': 'fill',
+        'source': {
+            'type': 'geojson',
+            'data': 'data/ch5/landuseA.geojson'
+        },
+        'paint': {
+            'fill-color': ['match', ['get', 'LandUse'],
+                '02', '#fee8c8',
+                '03', '#fee8c8',
+                '04', '#e34a33',
+                '05', '#fdbb84',
+                '#ffffff',
+        ],'fill-opacity': 0,
+        }
+    }'waterway-shadow');
+
+    /**********************
+    // chapter 6
+    ***********************/
+    map.addLayer({
+        'id': 'landuseB',
+        'type': 'fill',
+        'source': {
+            'type': 'geojson',
+            'data': 'data/ch/6landuseB.geojson'
+        },
+        'paint': {
+            'fill-color': ['match', ['get', 'landUse2'],
+                '02', '#fee8c8',
+                '03', '#fee8c8',
+                '04', '#e34a33',
+                '05', '#fdbb84',
+                '#ffffff',
+        ],'fill-opacity': 0.5
+        },
+    }'waterway-shadow');
+
+    /**********************
+    // chapter 7
+    ***********************/
+    map.addLayer({
        'id': 'landuseA4',
        'type': 'fill',
        'source': {
            'type': 'geojson',
-           'data': 'data/landuseA4.geojson'
+           'data': 'data/ch7/landuseA4.geojson'
        },
        'paint': {
            'fill-color': ['match', ['get', 'landUse'],
                '04', '#800000',
                '#800000',
-       ],'fill-opacity': 1
+       ],'fill-opacity': 0
        }
    }, 'waterway-shadow');
+
    map.addLayer({
        'id': 'landuseB4',
        'type': 'fill',
        'source': {
            'type': 'geojson',
-           'data': 'data/landuseB4.geojson'
+           'data': 'data/ch7/landuseB4.geojson'
        },
        'paint': {
            'fill-color': ['match', ['get', 'landUse2'],
                '04', '#fee8c8',
                '#ffffff',
-       ],'fill-opacity': 0.5
+       ],'fill-opacity': 0
        }
    }, 'waterway-shadow');
-  
-  
-  // chapter 8
+
+    /**********************
+    // chapter 8
+    ***********************/
     map.addLayer({
         'id': 'midtown',
         'type': 'fill',
@@ -244,7 +361,7 @@ map.addLayer({
     //             600*0.3048, '#152238',
     //             900*0.3048, '#152238',
     //     ]);
-  
+
     map.addLayer({
         'id': 'supertallheights',
         'type': 'fill-extrusion',
@@ -254,8 +371,8 @@ map.addLayer({
         },
         'paint': {
             'fill-extrusion-height': [ '*',['get', 'heightroof'], 0.3048],//convert to meters
-            'fill-extrusion-color': 
-          
+            'fill-extrusion-color':
+
           ['step', ['get', 'heightroof'],
                 '#3182bd',
                 0*0.3048, '#adadad',
@@ -264,7 +381,7 @@ map.addLayer({
                 600*0.3048, '#152238',
                 900*0.3048, '#152238',
         ],
-          'fill-extrusion-opacity': 1
+          'fill-extrusion-opacity': 0
         }
     });
 
