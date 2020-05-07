@@ -385,7 +385,7 @@ map.on("load", function() {
           "match",
           ["get", "landUse2"],
           "04",
-          "#fee8c8",
+          "#fdbb84",
           "#ffffff"
         ],
         "fill-opacity": 0
