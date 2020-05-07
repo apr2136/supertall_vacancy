@@ -356,7 +356,7 @@ map.on("load", function() {
   /**********************
     // chapter 7
     ***********************/
-
+ 
   map.addLayer(
     {
       id: "landuseA4",
