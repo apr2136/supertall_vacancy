@@ -182,10 +182,6 @@ while changing the zoom level, pitch and bearing */
 map.on("load", function () {
     // This is the function that finds the first symbol layer
     var layers = map.getStyle().layers;
-    for (var i = 0; i < layers.length; i++) {
-        console.log(layers[i].id);
-    }  
-  
     var firstSymbolId;
     for (var i = 0; i < layers.length; i++) {
         if (layers[i].type === 'symbol') {
@@ -258,20 +254,20 @@ map.on("load", function () {
     map.addLayer({
         
         'id': 'supertallheights',
-        'type': 'fill',
+        'type': 'fill-extrusion',
         'source': {
             'type': 'geojson',
             'data': 'data/ch8/supertallheights.geojson'
         },
         'paint': {
-            'fill-color': ['step', ['get', 'heightroof'],
+            'fill-extrusion-color': ['step', ['get', 'heightroof'],
                 '#3182bd',
                 250, '#add8e6',
                 400, '#3182bd',
                 600, '#152238',
                 900, '#152238',
                     ],
-            'fill-opacity': 1
+            'fill-extrusion-opacity': 1
         }
     }, 'waterway-shadow');
 
