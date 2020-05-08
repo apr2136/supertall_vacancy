@@ -207,7 +207,7 @@ map.on("load", function() {
     ***********************/
   map.addLayer(
     {
-      id: "MGR_Joined",
+      id: "MGR_Joined_2",
       type: "fill",
       source: {
         type: "geojson",
@@ -216,18 +216,18 @@ map.on("load", function() {
       paint: {
         "fill-color":  [
           "step",
-          ["get", "MGI_Joined"],
+          ["get", "MGR_Joined_2"],
          defaultGray,
-          5,
-          "#4800fb",
-          10,
-          "#9300fb",
-          15,
-          "#f900fb",
-          20,
-          "#fb0058",
-          50,
-          "#fb0000"
+          1000,
+          "#fee5d9",
+          1500,
+          "#fcbba1",
+          2000,
+          "#fc9272",
+          2500,
+          "#fb6a4a",
+          3000,
+          "#de2d26"
         ],
         "fill-outline-color": "#ffffff",
         "fill-opacity": 0 
@@ -252,15 +252,15 @@ map.on("load", function() {
           "step",
           ["get", "Vacancy_rate"],
           "#0004fb",
-          1000,
+          5,
           "#fee5d9",
-          1500,
+          10,
           "#fcbba1",
-          2000,
+          15,
           "#fc9272",
-          2500,
+         20,
           "#fb6a4a",
-          3000,
+         50,
           "#de2d26"
         ],
         "fill-outline-color": "#ffffff",
@@ -287,8 +287,7 @@ map.on("load", function() {
         ["get", "Rent"],
         defaultGray,
         3000,
-        "#de2d26",
-        
+        "#de2d26",    
       ],
         "fill-opacity": 0
       }

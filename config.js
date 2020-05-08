@@ -223,12 +223,12 @@ var config = {
     },
     {
       
-      id: "ch9",
+      id: "ch9-1",
       title: "The Doormen Insights",
-      image: "images/Chapter_1_Image.jpg",
+      // image: "images/Chapter_1_Image.jpg",
       imageCredit: "Authors",
       description:  `
-      <audio controls autoplay id="audio-control">
+      <audio controls id="audio-control">
         <source src="audio/vinoly_tower_residential.m4a" type="audio/mpeg">
         Your browser does not support the audio tag.
       </audio>`,
