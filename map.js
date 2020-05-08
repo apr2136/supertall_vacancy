@@ -285,17 +285,10 @@ map.on("load", function() {
         "fill-color":[
         "step",
         ["get", "Rent"],
-        "#3182bd",
+        defaultGray,
         3000,
-        "#adadad",
-        250 * 0.3048,
-        "#add8e6",
-        400 * 0.3048,
-        "#3182bd",
-        600 * 0.3048,
-        "#152238",
-        900 * 0.3048,
-        "#152238"
+        "#de2d26",
+        
       ],
         "fill-opacity": 0
       }
