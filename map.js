@@ -214,23 +214,23 @@ map.on("load", function() {
         data: "data/ch1/MGR_Joined_2.geojson"
       },
       paint: {
-        "fill-color": [
+        "fill-color":  [
           "step",
-          ["get", "Rent"],
-          defaultGray,
-          1000,
-          colorGradient[0],
-          1500,
-          colorGradient[2],
-          2000,
-          colorGradient[3],
-          2500,
-          colorGradient[4],
-          3000,
-          colorGradient[5]
+          ["get", "MGI_Joined"],
+         defaultGray,
+          5,
+          "#4800fb",
+          10,
+          "#9300fb",
+          15,
+          "#f900fb",
+          20,
+          "#fb0058",
+          50,
+          "#fb0000"
         ],
-        "fill-opacity": 0,
-        "fill-outline-color": "#ffffff"
+        "fill-outline-color": "#ffffff",
+        "fill-opacity": 0 
       }
     },
     "waterway-shadow"
@@ -245,23 +245,23 @@ map.on("load", function() {
       type: "fill",
       source: {
         type: "geojson",
-        data: "data/ch2/vacancy_rate.geojson"
+        data: "data/ch1/vacancy_rate.geojson"
       },
       paint: {
         "fill-color": [
           "step",
           ["get", "Vacancy_rate"],
           "#0004fb",
-          5,
-          "#4800fb",
-          10,
-          "#9300fb",
-          15,
-          "#f900fb",
-          20,
-          "#fb0058",
-          50,
-          "#fb0000"
+          1000,
+          "#fee5d9",
+          1500,
+          "#fcbba1",
+          2000,
+          "#fc9272",
+          2500,
+          "#fb6a4a",
+          3000,
+          "#de2d26"
         ],
         "fill-outline-color": "#ffffff",
         "fill-opacity": 0    
