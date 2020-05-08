@@ -54,7 +54,7 @@ var config = {
       onChapterEnter: [
         {
           layer: "vacancy_rate",
-          opacity: 0.5  
+          opacity: 1    
         }
       ],
       onChapterExit: [

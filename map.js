@@ -257,13 +257,13 @@ for (var i = 0; i < layers.length; i++) {
         "fill-color": [
           "step",
           ["get", "Vacancy_rate"],
-          "#f2f0f7",
+          defaultGray,
           5,
-          "#dadaeb",
+          "#f2f0f7",
           10,
           "#bcbddc",
           15,
-          "#756bb1",
+          "#9e9ac8",
          20,
           "#756bb1",
          50,
@@ -273,7 +273,7 @@ for (var i = 0; i < layers.length; i++) {
         "fill-opacity": 0    
       }
     },
-    "waterway"
+    "landcover"
   );
 
   /**********************
@@ -459,15 +459,15 @@ for (var i = 0; i < layers.length; i++) {
         "step",
         ["get", "heightroof"],
         "#3182bd",
-        0 ,//* 0.3048,
+        0 * 0.3048,
         "#adadad",
-        250,// * 0.3048,
+        250 * 0.3048,
         "#add8e6",
-        400,// * 0.3048,
+        400 * 0.3048,
         "#3182bd",
-        600,// * 0.3048,
+        600 * 0.3048,
         "#152238",
-        900,// * 0.3048,
+        900 * 0.3048,
         "#152238"
       ],
       "fill-extrusion-opacity": 0
