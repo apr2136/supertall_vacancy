@@ -29,7 +29,7 @@ var config = {
       onChapterEnter: [
         {
           layer: "MGR_Joined_2",
-          opacity: 0.6
+          opacity: .75  
         }
       ],
       onChapterExit: [
@@ -54,7 +54,7 @@ var config = {
       onChapterEnter: [
         {
           layer: "vacancy_rate",
-          opacity: 1    
+          opacity: .75     
         }
       ],
       onChapterExit: [
@@ -79,7 +79,7 @@ var config = {
        onChapterEnter: [
         {
           layer: "rentlayer",
-          opacity: 0.5  
+          opacity: .75    
         }
       ],
       onChapterExit: [

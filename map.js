@@ -222,8 +222,10 @@ for (var i = 0; i < layers.length; i++) {
       paint: {
         "fill-color":  [
           "step",
-          ["get", "MGR_Joined_2"],
+          ["get", "Rent"],
          defaultGray,
+          0,
+          "#ffffff",
           1000,
           "#fee5d9",
           1500,
