@@ -4,12 +4,12 @@ var config = {
   theme: "light",
   alignment: "left",
   toptitle: "Points Unknown | Spring 2020 | Columbia GSAPP",
-  title: "Vacancies In Supertalls",
-  byline: "By Ashley, Ava and Aayushi",
+  title: "The Contentious Vacancy of Midtown SuperTalls",
+  byline: "By Ashley Esparza, Gustava Leonie Gruentuch and Aayushi Pradip Joshi",
   description:
     '<p>In New York City the lack of affordable housing has long been a contentious issue undermining residential diversity. As planning policy has shifted steadily towards urban liberalism, the city relies on relaxed zoning regulations and tax incentives to provide housing and public amenities. These very upzoning policies intended to bolster vital aspects of the city have inflated real estate values and created a sweet spot for developers with little in it for most New Yorkers.</p>',
   footer:
-    'This story is based on data by the <a href="hhttps://factfinder.census.gov/">American Fact Finder </a> and reporting by the New York Times (<a href="https://www.nytimes.com/2019/06/05/realestate/new-york-citys-evolving-skyline.html">here</a>) and <https://www.ny1.com/nyc/all-boroughs/news/2020/01/06/what-s-behind-the-supertall-skyscraper-boom-changing-nyc-s-iconic-skyline-''>here</a>), and <a href="https://ny.curbed.com/2020/3/24/21192454/coronavirus-nyc-transportation-subway-citi-bike-covid-19">Curbed</a>.',
+    'This story is based on data by the <a href="hhttps://factfinder.census.gov/">American Fact Finder </a> and reporting by the <a href="https://www.nytimes.com/2019/06/05/realestate/new-york-citys-evolving-skyline.html"> New York Times</a>, <a href=https://www.ny1.com/nyc/all-boroughs/news/2020/01/06/what-s-behind-the-supertall-skyscraper-boom-changing-nyc-s-iconic-skyline-">NY1</a>, and <a href="https://ny.curbed.com/2020/3/24/21192454/coronavirus-nyc-transportation-subway-citi-bike-covid-19">Curbed</a>.',
   footerAttribution:
     '<a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox</a> | <a href="http://www.openstreetmap.org/about/" target="_blank">© OpenStreetMap</a> | <a href="https://brown.columbia.edu">The Brown Institute for Media Innovation</a>',
   chapters: [
