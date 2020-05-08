@@ -28,13 +28,13 @@ var config = {
       },
       onChapterEnter: [
         {
-          layer: "MGR_Joined",
+          layer: "MGR_Joined_2",
           opacity: 0.6
         }
       ],
       onChapterExit: [
         {
-          layer: "MGR_Joined",
+          layer: "MGR_Joined_2",
           opacity: 0
         }
       ]

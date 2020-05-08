@@ -23,6 +23,7 @@ The first one gets the type of layer (from a name specified on the config.js fil
 The second one adjusts the layer's opacity */
 
 function getLayerPaintType(layer) {
+  console.log(layer)
   var layerType = map.getLayer(layer).type;
   return layerTypes[layerType];
 }
@@ -201,6 +202,11 @@ map.on("load", function() {
       break;
     }
   }
+  
+var layers = map.getStyle().layers;
+for (var i = 0; i < layers.length; i++) {
+    console.log(layers[i].id);
+}  
 
   /********************** 
     // chapter 1
@@ -233,7 +239,7 @@ map.on("load", function() {
         "fill-opacity": 0 
       }
     },
-    "waterway-shadow"
+    "waterway"
   );
 
   /**********************
@@ -245,29 +251,29 @@ map.on("load", function() {
       type: "fill",
       source: {
         type: "geojson",
-        data: "data/ch1/vacancy_rate.geojson"
+        data: "data/ch2/vacancy_rate.geojson"
       },
       paint: {
         "fill-color": [
           "step",
           ["get", "Vacancy_rate"],
-          "#0004fb",
+          "#f2f0f7",
           5,
-          "#fee5d9",
+          "#dadaeb",
           10,
-          "#fcbba1",
+          "#bcbddc",
           15,
-          "#fc9272",
+          "#756bb1",
          20,
-          "#fb6a4a",
+          "#756bb1",
          50,
-          "#de2d26"
+          "#54278f"
         ],
         "fill-outline-color": "#ffffff",
         "fill-opacity": 0    
       }
     },
-    "waterway-shadow"
+    "waterway"
   );
 
   /**********************
@@ -292,7 +298,7 @@ map.on("load", function() {
         "fill-opacity": 0
       }
     },
-    "waterway-shadow"
+    "waterway"
   );
 
   /**********************
@@ -333,7 +339,7 @@ map.on("load", function() {
         "fill-opacity": 0
       }
     },
-    "waterway-shadow"
+    "waterway"
   );
   
 
@@ -366,7 +372,7 @@ map.on("load", function() {
         "fill-opacity": 0
       }
     },
-    "waterway-shadow"
+    "waterway"
   );
   
   /**********************
@@ -386,7 +392,7 @@ map.on("load", function() {
         "fill-opacity": 0
       }
     },
-    "waterway-shadow"
+    "waterway"
   );
 
   map.addLayer(
@@ -408,7 +414,7 @@ map.on("load", function() {
         "fill-opacity": 0
       }
     },
-    "waterway-shadow"
+    "waterway"
   );
 
   /**********************
@@ -427,7 +433,7 @@ map.on("load", function() {
         "fill-opacity": 0.1
       }
     },
-    "waterway-shadow"
+    "waterway"
   );
 
   map.setPaintProperty("building-extrusion", "fill-extrusion-opacity", 0);
@@ -444,7 +450,8 @@ map.on("load", function() {
     type: "fill-extrusion",
     source: {
       type: "geojson",
-      data: "data/ch8/supertallheights.geojson"
+      // data: "data/ch8/supertallheights.geojson"
+       data: "data/ch9/HeightsMidtown.geojson"
     },
     paint: {
       "fill-extrusion-height": ["*", ["get", "heightroof"], 0.3048], //convert to meters
@@ -452,15 +459,15 @@ map.on("load", function() {
         "step",
         ["get", "heightroof"],
         "#3182bd",
-        0 * 0.3048,
+        0 ,//* 0.3048,
         "#adadad",
-        250 * 0.3048,
+        250,// * 0.3048,
         "#add8e6",
-        400 * 0.3048,
+        400,// * 0.3048,
         "#3182bd",
-        600 * 0.3048,
+        600,// * 0.3048,
         "#152238",
-        900 * 0.3048,
+        900,// * 0.3048,
         "#152238"
       ],
       "fill-extrusion-opacity": 0
@@ -482,28 +489,8 @@ map.on("load", function() {
         "fill-opacity": 0
       }
     },
-    "waterway-shadow");
+    "waterway");
   
-  map.on("click", function(e) {
-    // set bbox as 5px reactangle area around clicked point
-    var bbox = [[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]];
-    var features = map.queryRenderedFeatures(bbox, {
-      layers: ["counties"]
-    });
-
-    // Run through the selected features and set a filter
-    // to match features with unique FIPS codes to activate
-    // the `counties-highlighted` layer.
-    var filter = features.reduce(
-      function(memo, feature) {
-        memo.push(feature.properties.FIPS);
-        return memo;
-      },
-      ["in", "FIPS"]
-    );
-
-    // map.setFilter("counties-highlighted", filter);
-  });
 
   // Setup the instance, pass callback functions
   scroller
@@ -536,12 +523,6 @@ map.on("load", function() {
     });
 });
 
-// Listen for a click on the map
-map.on('click', function(e) {
-  // When the map is clicked, add a new drop-off point
-  // and update the `dropoffs-symbol` layer
-  console.log("a click")
-});
 
 /* Here we watch for any resizing of the screen to
 adjust our scrolling setup */
