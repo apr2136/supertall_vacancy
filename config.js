@@ -76,8 +76,18 @@ var config = {
         pitch: 0,
         bearing: 0
       },
-      onChapterEnter: [],
-      onChapterExit: []
+       onChapterEnter: [
+        {
+          layer: "rentlayer",
+          opacity: 0.5  
+        }
+      ],
+      onChapterExit: [
+        {
+          layer: "rentlayer",
+          opacity: 0
+        }
+      ]
     },
     {
       id: "ch4",

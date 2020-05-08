@@ -273,11 +273,35 @@ map.on("load", function() {
   /**********************
     // chapter 3
     ***********************/
-  /*
-    map.addLayer({
-    TODO
-    }'waterway-shadow');
-    */
+  map.addLayer(
+    {
+      id: "rentlayer",
+      type: "fill",
+      source: {
+        type: "geojson",
+        data: "data/ch3/3000usd.geojson"
+      },
+      paint: {
+        "fill-color":[
+        "step",
+        ["get", "Rent"],
+        "#3182bd",
+        3000,
+        "#adadad",
+        250 * 0.3048,
+        "#add8e6",
+        400 * 0.3048,
+        "#3182bd",
+        600 * 0.3048,
+        "#152238",
+        900 * 0.3048,
+        "#152238"
+      ],
+        "fill-opacity": 0
+      }
+    },
+    "waterway-shadow"
+  );
 
   /**********************
     // chapter 4
