@@ -225,7 +225,7 @@ for (var i = 0; i < layers.length; i++) {
           ["get", "Rent"],
          defaultGray,
           0,
-          "#ffffff",
+          "#f7f7f7",
           1000,
           "#fee5d9",
           1500,
@@ -275,7 +275,7 @@ for (var i = 0; i < layers.length; i++) {
         "fill-opacity": 0    
       }
     },
-    "landcover"
+    "waterway"
   );
 
   /**********************
@@ -294,8 +294,10 @@ for (var i = 0; i < layers.length; i++) {
         "step",
         ["get", "Rent"],
         defaultGray,
+        1,
+        "#fee5d9",
         3000,
-        "#de2d26",    
+        "#de2d26",  
       ],
         "fill-opacity": 0
       }
@@ -447,6 +449,7 @@ for (var i = 0; i < layers.length; i++) {
   //             900*0.3048, '#152238',
   //     ]);
 
+  var convmult = 0.3048;
   map.addLayer({
     id: "supertallheights",
     type: "fill-extrusion",
@@ -456,21 +459,20 @@ for (var i = 0; i < layers.length; i++) {
        data: "data/ch9/HeightsMidtown.geojson"
     },
     paint: {
-      "fill-extrusion-height": ["*", ["get", "heightroof"], 0.3048], //convert to meters
+      "fill-extrusion-height": ["*", ["get", "heightroof"], convmult], //convert to meters
       "fill-extrusion-color": [
         "step",
-        ["get", "heightroof"],
+        ["*", ["get", "heightroof"], convmult],
         "#3182bd",
-        0 * 0.3048,
+        250,
         "#adadad",
-        250 * 0.3048,
+        400,
         "#add8e6",
-        400 * 0.3048,
+        600,
         "#3182bd",
-        600 * 0.3048,
+        900,
         "#152238",
-        900 * 0.3048,
-        "#152238"
+        1500
       ],
       "fill-extrusion-opacity": 0
     }
