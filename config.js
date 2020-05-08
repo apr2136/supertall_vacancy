@@ -182,7 +182,7 @@ var config = {
       title: "Chapter 8",
       image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_8_Image.png?v=1588886879438",
     
-      description: "this is the text for chapter 8",
+      description: "Even though the footprint of these residential buildings named SuperTalls are smaller, they hold a large number of housing units stacked vertically to their maximum FSI and capacity. What’s fascinating is that even though these buildings are tall and accommodate many units, more than 40% of these buildings run vacant. Increasing the vacancy rates of this neighbourhood, these luxurious buildings don’t cater to the urgency of housing and the bigger question of the affordability curve that’s been rising steeply in Manhattan. Majorly owned by foreign investors, the apartments hence render empty, serving no specific target tenants in contention but rather encroaching the skyline of the city, unnecessarily. The rezoning policies targeting the business of NYC as the prime beneficiaries has a domino impact on the housing scenario of Manhattan.",
       location: {
         // 15.16/40.764982/-73.978015/45.1/60
         center: [-73.978015, 40.764982],
