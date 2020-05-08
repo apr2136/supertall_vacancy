@@ -264,7 +264,7 @@ map.on("load", function() {
           "#fb0000"
         ],
         "fill-outline-color": "#ffffff",
-        "fill-opacity": 0
+        "fill-opacity": 0    
       }
     },
     "waterway-shadow"

@@ -54,7 +54,7 @@ var config = {
       onChapterEnter: [
         {
           layer: "vacancy_rate",
-          opacity: 0.2
+          opacity: 0.5  
         }
       ],
       onChapterExit: [
@@ -149,7 +149,7 @@ var config = {
       title: "Shift in the Land Use",
       image: "https://cdn.glitch.com/72bfdaaa-3877-4452-967f-689214d9b066%2FChapter_7_Image.png?v=1588886430419",
 
-      description: "As a result, the mixed use lots drastically increased as much as twice the footprint between 2000 to 2017. Several commercial lots are adding housing wings that allow them to go taller. A high concentration of these mixed use buildings can be observed developing in the north of this midtown zone, emerging to become one of the highest estate value streets of Manhattan, Billionaire's row. The number of flats available for rent in this row surged up but also increasing the rental value of these apartments.",
+      description: "As a result, the mixed use lots drastically increased as much as twice the footprint between the year 2000 and 2017. Several commercial lots are adding housing wings that allow them to go taller. A high concentration of these mixed use buildings can be observed developing in the north of this midtown zone, emerging to become one of the highest estate value streets of Manhattan, Billionaire's row. The number of flats available for rent in this row surged up but also increasing the rental value of these apartments.",
       location: {
         center: [-73.986, 40.761],
         zoom: 14.66,
